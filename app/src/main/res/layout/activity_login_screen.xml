@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_screen">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginscreen_inputlayout_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/_280mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30mdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_10mdp"
+        app:boxCornerRadiusBottomStart="@dimen/_10mdp"
+        app:boxCornerRadiusTopEnd="@dimen/_10mdp"
+        app:boxCornerRadiusTopStart="@dimen/_10mdp"
+        app:boxStrokeColor="@color/my_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="E-Mail"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/_15font_mdp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginscreen_inputlayout_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/_280mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:boxCornerRadiusBottomEnd="@dimen/_10mdp"
+        app:boxCornerRadiusBottomStart="@dimen/_10mdp"
+        app:boxCornerRadiusTopEnd="@dimen/_10mdp"
+        app:boxCornerRadiusTopStart="@dimen/_10mdp"
+        app:boxStrokeColor="@color/my_primary"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/loginscreen_inputlayout_email"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/loginscreen_inputlayout_email"
+        app:layout_constraintTop_toBottomOf="@+id/loginscreen_inputlayout_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textSize="@dimen/_15font_mdp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Login"
+        android:textColor="@color/my_primary"
+        android:textSize="@dimen/_30font_mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView2"
+        android:layout_width="@dimen/_200mdp"
+        android:layout_height="@dimen/_200mdp"
+        android:layout_marginTop="@dimen/_25mdp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loginscreen">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <Button
+        android:id="@+id/loginscreen_btn_login"
+        android:layout_width="@dimen/_200mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40mdp"
+        android:text="Login"
+        android:textSize="@dimen/_20mdp"
+        app:layout_constraintEnd_toEndOf="@+id/loginscreen_inputlayout_password"
+        app:layout_constraintStart_toStartOf="@+id/loginscreen_inputlayout_email"
+        app:layout_constraintTop_toBottomOf="@+id/loginscreen_inputlayout_password" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="don't have an account?"
+        android:textSize="@dimen/_14font_mdp"
+        app:layout_constraintEnd_toStartOf="@+id/loginscreen_signup_txtview"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/loginscreen_btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/loginscreen_btn_login" />
+
+    <TextView
+        android:id="@+id/loginscreen_signup_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Sign Up"
+        android:textColor="@color/my_primary"
+        android:textSize="@dimen/_16font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/loginscreen_btn_login"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.FadingCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/my_primary"
+        app:layout_constraintBottom_toTopOf="@+id/loginscreen_btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/loginscreen_btn_login"
+        app:layout_constraintStart_toStartOf="@+id/loginscreen_btn_login" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

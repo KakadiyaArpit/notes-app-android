@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addnote_detail_screen">
+
+    <TextView
+        android:id="@+id/page_title_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Add New Notes"
+        android:textColor="@color/my_primary"
+        android:textSize="@dimen/_22font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/savenotesBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageButton
+        android:id="@+id/savenotesBtn"
+        android:layout_width="@dimen/_32mdp"
+        android:layout_height="@dimen/_32mdp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:tint="@color/my_primary"
+        app:layout_constraintBottom_toBottomOf="@+id/page_title_txtview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/page_title_txtview"
+        app:layout_constraintTop_toTopOf="@+id/page_title_txtview"
+        app:srcCompat="@drawable/save_notes"
+        tools:ignore="SpeakableTextPresentCheck,UseAppTint,TouchTargetSizeCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/savenotesBtn"
+        app:layout_constraintStart_toStartOf="@+id/page_title_txtview"
+        app:layout_constraintTop_toBottomOf="@+id/page_title_txtview"
+        android:elevation="@dimen/_10mdp"
+        app:cardCornerRadius="@dimen/_10mdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box_border">
+
+            <EditText
+                android:id="@+id/title_edittext"
+                android:layout_width="@dimen/_250mdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Title"
+                android:inputType="text"
+                android:textSize="@dimen/_20font_mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingStart="@dimen/_5mdp"/>
+
+            <EditText
+                android:id="@+id/content_edittext"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_200mdp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="top"
+                android:hint="Content"
+                android:paddingStart="@dimen/_5mdp"
+                android:minLines="15"
+                android:textSize="@dimen/_15font_mdp"
+                android:inputType="textMultiLine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/title_edittext"
+                app:layout_constraintStart_toStartOf="@+id/title_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/title_edittext" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/deletenotes_fat"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Delete Note"
+        android:textSize="@dimen/_18font_mdp"
+        android:textColor="#F63729"
+        android:backgroundTint="@color/my_primary"
+        android:visibility="gone">
+
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
